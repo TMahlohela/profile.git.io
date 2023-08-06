@@ -1,0 +1,83 @@
+@import url("sections/about.css");
+@import url("sections/nav.css");
+@import url("sections/hero.css");
+@import url("sections/slides.css");
+@import url("sections/coffee.css");
+@import url("sections/footer.css");
+@import url("sections/header.css");
+@import url("sections/projects.css");
+@import url("sections/contact.css");
+@import url("https://fonts.googleapis.com");
+@import url("https://fonts.gstatic.com");
+@import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css");
+
+:root {
+  font-family: 'Inter', sans-serif;
+  font-weight: 300;
+  color-scheme: light dark;
+  background-color:var(--background);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  list-style-type: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  --base-color:#fafafa;
+  --primary-color:#000000;
+  --secondary-color:#576e6a;
+  --theme-color: #80c5c5;
+  --backdrop-color:#615252;
+  --silver-color:#cacaca;
+  --background:#ffffff;
+}
+
+body, html {
+	height: 100%;
+	width: 100%;
+	margin:0px;
+	color: var(--primary-color);
+	font-family: 'Inter', sans-serif;
+	scroll-behavior: smooth;
+}
+
+.fa-solid, .fas {
+    font-weight: 900;
+    padding: 15px;
+}
+
+.bgimg-1, .bgimg-2, .bgimg-3 {
+  position: relative;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#myTop {
+	background-color:var(--secondary-color);/* Set a background color */
+	display: none; /* Hidden by default */
+	position: fixed; /* Fixed/sticky position */
+	bottom: 0; /* Place the button at the bottom of the page */
+	right: 1em; /* Place the button 30px from the right */
+	z-index: 99; /* Make sure it does not overlap */
+	border: none; /* Remove borders */
+	outline: none; /* Remove outline */
+	color: var(--primary-color); /* Text color */
+	cursor: pointer; /* Add a mouse pointer on hover */
+	padding: 3px; /* Some padding */
+	width:8em;
+	border-radius: 50px 50px 0 0; /* Rounded corners */
+	font-size: 10pt; /* Increase font size */
+	opacity:0.9;
+}
+
+#myTop:hover {
+	opacity:1;
+	background-color: var(--secondary-color); /* Add a dark-grey background on hover */
+}
+
+@media only screen and (max-device-width: 1024px) {
+  .bgimg-1, .bgimg-2, .bgimg-3 {
+  background-attachment: scroll;
+  }
+}

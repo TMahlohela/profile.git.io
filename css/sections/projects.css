@@ -1,0 +1,113 @@
+.projects {
+    width: 100%;
+    padding-top: 0;
+    padding-bottom: 15em;
+    margin: auto;
+    text-align: center;
+    background-color: var(--silver-color);
+    justify-content: center;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.heading-articles{
+	margin:0%;
+	padding:5%;
+}
+
+.heading{
+	font-size:32px;
+	text-transform:uppercase;
+	font-weight:500;
+}
+
+.heading-caption {
+	position: absolute;
+	color: #000000;
+	padding:5%;
+}
+
+.caption span.heading {
+	padding:10%;
+	margin:auto;
+	font-size: 32px;
+}
+hr.hr-articles {
+	position: relative;
+	display:flex;
+	margin-top:3%;
+	flex:1;
+	border: 1px solid #000000;
+	max-width:4em;
+	width:auto;
+	text-align: center;
+}
+
+hr.hr-articles-column{
+	position: relative;
+	display:flex;
+	margin-top: 2em;
+	flex:1;
+	border: 2px solid #000000;
+	max-width:4em;
+	width:auto;
+	text-align: center;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: auto;
+}
+
+.column p{
+	font-size: small;
+	padding: 2em;
+}
+
+.column iframe{
+	height: 100%;
+	width:100%;
+	border-style: none;
+}		
+/* Create two equal columns that floats next to each other */
+.column {
+    position:relative;
+    justify-content: space-between;
+    float: left;
+    margin: 2em;
+    margin-top: 4em;
+    width: 28%;
+    display:flexbox;
+    height: 20em;
+}
+
+@media only screen and (max-width: 795px){					
+	.column{
+		width:75%;
+		height:auto;
+		padding-top: 3em;
+	}
+}
+
+@media only screen and (max-width: 350px){					
+	.column{
+		min-width: 120px;
+	}
+}
+
+.column-paragraph{
+    /* margin:0%; */
+    padding-top: 1em;
+    background-color:var(--background);
+}
+  /* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+    height: 100%;
+}

@@ -1,0 +1,246 @@
+.hero {
+	position: relative;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-attachment: fixed;
+	margin:10px;
+	margin-bottom: 0px;
+	text-transform:uppercase;
+	text-decoration: none;
+	/* padding:10px; */
+	min-height: 100%;
+	height: 40em;
+}
+
+#myLogo {
+	display:flex;
+	list-style:none;
+	text-align: left;
+	padding:0px;
+	height: 0px;
+	margin: auto;
+	margin-top: 25%;
+	font-weight: 500;
+	font-size: 30px;
+	text-decoration:none;	
+	text-transform: uppercase;
+	text-shadow: 1px 1px 2px var(--secondary-color);
+	align-items:center;
+	justify-content:flex-end;
+}
+
+#myLinks {
+	padding:2px;
+}
+
+#myLogo{
+	color:var(--theme-color);
+	top: 22px;
+}
+
+#logoT {
+	color: var(--secondary-color);
+}
+
+.topnav {
+	width:100%;
+	position: fixed;
+	top: 0;
+	right: 0;
+	display:flex;
+	justify-content: space-evenly;
+	overflow: hidden;
+	background-color: var(--theme-color);
+	text-align: center;
+	z-index: 99;
+	border: none; /* Remove borders */
+	outline: none; /* Remove outline */
+	cursor: pointer; /* Add a mouse pointer on hover */
+	border-radius: 0 0 50px 50px;
+	opacity:0.8;
+}
+
+.topnav:hover {
+	opacity:1;
+	background-color: var(--theme-color);
+}
+
+.topnav a {
+	float: left;
+	color: var(--base-color);
+	padding: 10px;
+	border-radius: 10px;
+	text-decoration: none;
+	font-size:medium;
+	margin: 5px;
+	opacity:1;
+}
+
+
+.topnav a:active {
+	background-color: var(--theme-color);
+	transition: 300ms ease-in-out;
+	border:none;
+	border-radius: 10px;
+	box-shadow: inset -2px -2px 3px var(--theme-color), inset 3px 2px 2px rgba(100, 75, 100, .40 );
+}
+
+.topnav a.icon {
+	float: right;
+}
+
+.nav__Logo {
+	display:flex;
+	list-style:none;
+	text-align: left;
+	padding:0px;
+	height: 0px;
+	margin: auto;
+	margin-top: 25%;
+	font-weight: 500;
+	font-size: 50px;
+	text-decoration:none;
+	text-shadow: 1px 1px 2px var(--primary-color);
+	text-transform: uppercase;
+	align-items:center;
+	justify-content:flex-end;
+}
+
+.nav__links a {
+	display: inline-block;
+	position: relative;
+	color: var(--base-color);
+	top: 10px;
+}
+
+.nav__links a::after {
+	content: '';
+	position: absolute;
+	width: 40%;
+	transform: scaleX(0);
+	height: 2px;
+	bottom: 0;
+	left: 33px;
+	background-color: var(--secondary-color);
+	transform-origin: bottom right;
+	transition: transform 0.3s ease-out;
+}
+
+.nav__links a:hover::after {
+	transform: scaleX(1);
+	transform-origin: bottom left;
+}
+
+.top__nav {
+	width:100%;
+	display:flex;
+	justify-content: space-between;
+	overflow: hidden;
+	background-color: transparent;
+	position: relative;
+	text-align: center;
+	float: left;
+	color: var(--primary-color);
+	padding: 20px;
+	text-decoration: none;
+	font-size:medium;
+}
+
+.top__nav a.icon {
+	float: right;
+}
+
+.icon:hover {
+	color: var(--base-color);
+	background-color: var(--theme-color);
+	transition: 300ms ease-in-out;
+	border:none;
+	box-shadow: inset -2px -2px 3px var(--secondary-color), inset 3px 2px 2px rgba(100, 75, 100, .40 );
+}
+
+@media only screen and (max-width:705px){
+  .topnav a {
+    float: left;
+    color: var(--base-color);
+    padding: 8px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-size: 15px; 
+    margin:5px;
+  }
+}
+
+@media only screen and (max-width:450px){
+  .topnav a {
+    float: left;
+    color: var(--base-color);
+    padding: 10px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-size: 10px;
+    margin: 2px;
+  }
+}
+
+hr.hr-hero {
+	position: relative;
+	display:flex;
+	margin-top: 2em;
+	flex:1;
+	border: 2px solid var(--base-color);
+	max-width:8em;
+	width:auto;
+	text-align: center;
+}
+
+.caption {
+	position: absolute;
+	font-weight: 500;
+	left: 0;
+	top: 10%;
+	width: 100%;
+	color: var(--base-color);
+	text-align: center;
+	font-weight:500;
+	text-transform:uppercase;
+	text-shadow: 1px 1px 2px var(--secondary-color);
+	cursor:pointer;
+}
+
+.caption span.hero-h1 {
+	flex:1;
+	padding: 5px;
+	font-size: 70pt;
+}
+
+.caption h2 {
+  margin:0;
+}
+
+@media only screen and (max-width: 712px){					
+	.caption span.hero-h1 {
+		padding: 0px;
+		font-size:90px;
+	}
+}
+
+@media only screen and (max-width: 580px){
+	.caption span.hero-h1 {
+		padding: 0px;
+		font-size:40px;
+	}
+}
+
+.caption span.hero-p {
+	padding: 2px;
+	font-size: 15pt;
+			  
+	@media only screen and (
+	max-width: 550px){
+	padding: 20px;
+	font-size:15px;
+	}
+};
+	}
+}

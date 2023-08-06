@@ -1,0 +1,16 @@
+.slideshow {
+    overflow: hidden;
+    width: 80%;
+    min-width: 150px;
+    position: relative;
+    left: 0;
+    width: 100%;
+    display: block;
+}
+
+.slideshw {
+    display: flex;
+    background-size: cover;
+    width: 80%;
+    height: 500px;
+}
