@@ -76,20 +76,23 @@ hr.hr-articles-column{
 /* Create two equal columns that floats next to each other */
 .column {
     position:relative;
-    justify-content: space-between;
     float: left;
+	padding-top: 4em;
     margin: 2em;
-    margin-top: 4em;
-    width: 28%;
-    display:flexbox;
+	margin-bottom:5em;
+    width: 25%;
+    display:flex;
+	flex-wrap:wrap;
+	align-content:center;
+	
     height: 20em;
+    justify-content: space-evenly;
 }
 
 @media only screen and (max-width: 795px){					
 	.column{
 		width:75%;
 		height:auto;
-		padding-top: 3em;
 	}
 }
 
@@ -100,8 +103,7 @@ hr.hr-articles-column{
 }
 
 .column-paragraph{
-    /* margin:0%; */
-    padding-top: 1em;
+	width:100%;
     background-color:var(--background);
 }
   /* Clear floats after the columns */
