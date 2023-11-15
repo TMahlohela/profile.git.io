@@ -1,6 +1,6 @@
 /*active links*/
 const sections = document.querySelectorAll("section");
-const navLi = document.querySelectorAll("nav #myLinks a");
+const navA = document.querySelectorAll("nav .topnav .myLinks a");
 window.onscroll = () => {
   var current = "";
 
@@ -10,10 +10,10 @@ window.onscroll = () => {
       current = section.getAttribute("id"); }
   });
 
-  navLi.forEach((li) => {
-    li.classList.remove("active");
-    if (li.classList.contains(current)) {
-      li.classList.add("active");
+  navA.forEach((a) => {
+    a.classList.remove("active");
+    if (a.classList.contains(current)) {
+      a.classList.add("active");
     }
   });
 };

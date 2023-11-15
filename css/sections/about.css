@@ -1,34 +1,27 @@
 .about{
     width: 100%;
-    text-align: center;
+    text-align: center;	
+    padding-bottom: 5em;
 }
 
-.column-about-hug{
+.column__about-hug{
     flex:1;
     margin:5%;
     margin-top: 0;
 }
 
-.column-about {
+.column__about {
     float: left;
     width: 50%;
     height: 35rem;
-}
- 
-/* Clear floats after the columns */
-.row:after {
-    content: "";
-    display: table;
-    clear: both;
-	height:100%;
 }
 
 div.scroll {
     background-color: var(--theme-color);
     width: 100%;
     height: 18em;
-    overflow-x: auto;
-    overflow-y: auto;
+    overflow-x: hidden;
+    overflow-y: visible;
     text-align: center;
     padding: 0;
     border-radius: 20px;
@@ -40,6 +33,7 @@ div.scroll {
   max-width: auto;
   margin: 0 auto;
   border-radius:5px;
+  vertical-align: middle;
 }
 
 /* The actual timeline (the vertical ruler) */
@@ -49,41 +43,46 @@ div.scroll {
   width: 5px;
   background-color: white;
   top: 0;
-  bottom: 0;
+  bottom: -3em;
   left: 50%;
   margin-left: 2px;
 }
 
 /* Container around content */
-.container {
+.capsule {
   padding: 0px;
   position: relative;
   background-color: inherit;
   width: 30%;
+  z-index:2;
+  display:flex;
+  top:1em;
+  bottom:2em;
+  vertical-align: middle;
 }
 
 /* The circles on the timeline */
-.container::after {
-  /* content: ''; */
+ /* .capsule::after {
+ content: '';
   position: absolute;
   width: 25px;
   height: 25px;
-  left: -37%;
+  left: 20%;  
   background-color: white;
   border: 2px solid var(--secondary-color);
   top: 15px;
   border-radius: 50%;
-  z-index: 1;
-}
+  z-index: 0;
+} */
 
 /* Place the container to the left */
 .left {
-  left: -5em;
+  left: 50%;
 }
 
 /* Place the container to the right */
 .right {
-  left: 25%;
+  left: 27%;
 }
 
 /* Add arrows to the left container (pointing right) */
@@ -117,7 +116,7 @@ div.scroll {
 /* The actual content */
 .content {
   padding: 5px;
-  background-color: white;
+  background-color: var(--secondary-color);
   position: relative;
   border-radius: 5px;
   width: 10em;
@@ -130,38 +129,6 @@ div.scroll {
 	padding: 20px;
 	font-size:15px;
 	}
-}
-
-@media screen and (max-width: 600px) {
-  /* Place the timelime to the left */
-  .timeline::after {
-  left: 30px;
-  }
-  
-  /* Full-width containers */
-  .container {
-  width: 50%;
-  padding-left: 70px;
-  padding-right: 25px;
-  }
-  
-  /* Make sure that all arrows are pointing leftwards */
-  .container::before {
-  left: 60px;
-  border: medium solid white;
-  border-width: 10px 10px 10px 0;
-  border-color: transparent white transparent transparent;
-  }
-
-  /* Make sure all circles are at the same spot */
-  .left::after, .right::after {
-  left: 15px;
-  }
-  
-  /* Make all right containers behave like the left ones */
-  .right {
-  left: 0%;
-  }
 }
 
 hr.hr-about {
@@ -189,39 +156,38 @@ hr.hr-about-column{
     padding-bottom: 5%;
     text-transform: uppercase;
     font-weight: 200;
+	color: var(--secondary-color);
 }
 
-.column-about p{
+.column__about p{
     overflow-x: hidden;
     width:auto;
-	font-size:16px;
     font-size: small;
-    text-align:left;
+    text-align:justiy;
     vertical-align: middle;
-    padding-left:4em;
 }
 
 @media only screen and (max-width: 645px){
-    .column-about p{
+    .column__about p{
         font-size: smaller;
     }
 }
 
 @media only screen and (max-width: 425px){
-    .column-about p{
+    .column__about p{
         font-size:x-small;
     }
 }
 
 @media only screen and (max-width:600px){
-    .column-about{
+    .column__about{
 		width:75%;
 		height:auto;
 		margin:2em;
     }
 }
 
-.column-about img{
+.column__about img{
 	height:50%;
 	width:50%;
     border-radius: 50%;

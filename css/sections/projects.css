@@ -1,7 +1,7 @@
 .projects {
     width: 100%;
     padding-top: 0;
-    padding-bottom: 15em;
+    padding-bottom: 10em;
     margin: auto;
     text-align: center;
     background-color: var(--silver-color);
@@ -9,18 +9,6 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    background-attachment: fixed;
-}
-
-.heading-articles{
-	margin:0%;
-	padding:5%;
-}
-
-.heading{
-	font-size:32px;
-	text-transform:uppercase;
-	font-weight:500;
 }
 
 .heading-caption {
@@ -33,16 +21,6 @@
 	padding:10%;
 	margin:auto;
 	font-size: 32px;
-}
-hr.hr-articles {
-	position: relative;
-	display:flex;
-	margin-top:3%;
-	flex:1;
-	border: 1px solid #000000;
-	max-width:4em;
-	width:auto;
-	text-align: center;
 }
 
 hr.hr-articles-column{

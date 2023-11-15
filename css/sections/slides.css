@@ -8,9 +8,41 @@
     display: block;
 }
 
+.slideshw:hover {
+	transform:scale(1.05);
+	transition: 0.25s;
+	transition-duration: 0.5s;
+	transition-timing-function: linear;
+    transition-delay: 0s;
+    transition-property: all;
+}
+
 .slideshw {
     display: flex;
     background-size: cover;
     width: 80%;
     height: 500px;
+}
+
+.fade {
+	-webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+
+
+@keyframes fade {
+	from {opacity: .4}
+	to {opacity: 1}
+	  
+	0% {
+
+    opacity: .4;
+	}
+
+	100% {
+		opacity: 1;
+	}
 }

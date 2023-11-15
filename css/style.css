@@ -35,22 +35,43 @@ body, html {
 	height: 100%;
 	width: 100%;
 	margin:0px;
-	color: var(--primary-color);
+	background-color: var(--base-color);
 	font-family: 'Inter', sans-serif;
 	scroll-behavior: smooth;
 }
 
-.fa-solid, .fas {
-    font-weight: 900;
-    padding: 15px;
+.dark-mode{
+  background-color: grey;
+  color: white;
 }
 
-.bgimg-1, .bgimg-2, .bgimg-3 {
-  position: relative;
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+.heading{
+	display: flex;
+    justify-content: center;
+	font-size:xx-large;
+	text-transform:uppercase;
+    font-weight: 500;
+    padding-top: 2em;
+    padding-bottom: 1em;
+}
+
+hr.hr-articles {
+	position: relative;
+	display:flex;
+	margin-bottom:2em;
+	flex:1;
+	border: 1px solid #000000;
+	max-width:4em;
+	width:auto;
+	text-align: center;
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+	height:100%;
 }
 
 #myTop {
@@ -71,9 +92,15 @@ body, html {
 	opacity:0.9;
 }
 
-#myTop:hover {
+#myTop:hover {	
 	opacity:1;
+	transition: 0.15s;
+	transition-duration: 0.15s;
+	transition-timing-function: linear;
+    transition-delay: 0s;
+    transition-property: all;
 	background-color: var(--secondary-color); /* Add a dark-grey background on hover */
+	
 }
 
 @media only screen and (max-device-width: 1024px) {
